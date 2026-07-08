@@ -1,59 +1,60 @@
 # Prompt Engineering Skill for Claude Code
 
-A comprehensive Claude Code skill for designing, analyzing, optimizing, debugging, and evaluating prompts — with deep expertise in system prompts, CLAUDE.md files, agent instructions, and AI workflow prompts.
+A Claude Code skill focused on **optimizing codebases for AI-assisted development**. It analyzes your project and produces optimized CLAUDE.md files with project maps — so Claude can navigate and contribute without wasting thousands of tokens on exploration.
+
+Also covers system prompt creation, prompt optimization, review, debugging, and evaluation.
 
 ## Install
 
-Copy the `prompt-engineering` directory into your Claude Code skills folder:
+Copy the `prompt-engineering-skill` directory into your Claude Code skills folder:
 
 ```bash
-cp -r prompt-engineering/ ~/.claude/skills/prompt-engineering/
+cp -r prompt-engineering-skill/ ~/.claude/skills/prompt-engineering/
 ```
 
-The skill activates automatically when you ask Claude Code to work with prompts, system instructions, CLAUDE.md files, or agent configurations.
+The skill activates automatically when you ask Claude Code to optimize a codebase, create a CLAUDE.md, generate a project map, or work with any kind of prompt.
 
 ## What It Does
 
 | Capability | Description |
 |---|---|
-| **Create** | Build production-ready system prompts, agent instructions, and AI workflow prompts from requirements |
-| **Optimize** | Improve existing prompts — reduce ambiguity, remove redundancy, compress tokens, increase reliability |
+| **Codebase Optimize** | Analyze a project, build a project map, and produce a token-efficient CLAUDE.md so Claude stops wasting tokens exploring. **Primary workflow.** |
+| **Create** | Build production-ready system prompts, agent instructions, and AI workflow prompts |
+| **Prompt Optimize** | Improve existing prompts — reduce ambiguity, remove redundancy, compress tokens |
 | **Review** | Score any prompt across 8 quality dimensions with structured critique and rewrite |
-| **CLAUDE.md** | Write and optimize project instruction files for AI-assisted development |
 | **Debug** | Diagnose why prompts fail — find ambiguity, conflicts, gaps, and hallucination risks |
 | **Templates** | Get reusable prompt skeletons for common use cases |
 
 ## Usage Examples
 
 ```
-Create a system prompt for a customer support agent that handles billing
-questions, can look up invoices, and escalates refunds over $50.
+Analyze this codebase and create an optimized CLAUDE.md with a project map.
 ```
 
 ```
-Review this prompt and tell me what's wrong:
+Optimize my CLAUDE.md — it's too long and Claude keeps exploring the codebase anyway.
+```
+
+```
+Create a project map for this repo so Claude knows where everything is.
+```
+
+```
+Review this system prompt and tell me what's wrong:
 [paste your prompt]
 ```
 
 ```
-Optimize my CLAUDE.md — it's too long and has stale commands.
-```
-
-```
-My research assistant keeps hallucinating citations. Here's the prompt:
-[paste your prompt]
-```
-
-```
-Give me a template for a multi-agent pipeline with a coordinator and 3 workers.
+My agent keeps hallucinating. Here's the prompt — debug it.
 ```
 
 ## Skill Structure
 
 ```
-prompt-engineering/
+prompt-engineering-skill/
 ├── SKILL.md              # Core skill — workflows, routing, principles
 ├── reference/            # Deep-dive guides (loaded on demand)
+│   ├── codebase-optimization.md
 │   ├── system-prompt-architecture.md
 │   ├── xml-structuring.md
 │   ├── anti-patterns.md
